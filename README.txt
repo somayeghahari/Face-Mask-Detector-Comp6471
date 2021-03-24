@@ -27,6 +27,10 @@ The following files are submitted:
 	- dataset: 	  
 			 The main dataset is more than 250MB so we upload it in the repository. This folder contains a sample of images in the main dataset.
 			 This folder contains train and test subfolders with all their images. It should be located in the same folder as source code.
+			 
+			 NOTE: When we added the data in github, the Train dataset got truncate the directory to 1,000 files. 4,000 entries were omitted from the list.
+                         So we uploaded in Kaggle as public dataset. It can be found in https://www.kaggle.com/bikashjaiswal/dataset-for-mask-nonmask-and-nonhuman-classes
+			 Use download api: kaggle datasets download -d bikashjaiswal/dataset-for-mask-nonmask-and-nonhuman-classes
 
 Repository address: https://github.com/somayeghahari/comp6471-AI.git
 
