@@ -25,7 +25,7 @@ The following files are submitted:
 	- project report: Report.pdf
 			 This file has the explanation of the different phases of the project
 	- dataset: 	  
-			 The main dataset is more than 250MB so we upload it in the repository.
+			 The main dataset is more than 250MB so we upload it in the repository. This folder contains a sample of images in the main dataset.
 			 This folder contains train and test subfolders with all their images. It should be located in the same folder as source code.
 
 Repository address: https://github.com/somayeghahari/comp6471-AI.git
