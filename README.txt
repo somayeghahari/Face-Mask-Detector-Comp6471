@@ -1,36 +1,38 @@
 # comp6471-project-first phase
 
-In this project "AI face mask detector" we implement a CNN to detect and categorize dataset of images into non-human and with-mask and without-mask human.
+In this project "AI face mask detector" we implement bias detection and resolving steps and K-Fold cross validation step in phase2 of the project.
 The following files are submitted:
 	- read me file:  README.txt
-	- python code:	 AI_project_1.ipynb
-			 This Jupyter notebook file contains implementation of our project that includes splitting data, data preprocessing,
-			 designing the model, training, testing and evaluation. 
-			 --> By executing all the cells of this notebook all the steps will be executed.
+	- python code:	K-Fold.ipynb
+				This Jupyter notebook file contains implementation of K-Fold cross validation in phase 2.
+			 	--> By executing all the cells of this notebook all the steps will be executed.
+			bias_Train_AI_project_1.ipynb
+				This Jupyter notebook file contains implementation of training phase of bias section in phase 2.
+			 	--> By executing all the cells of this notebook all the steps will be executed.
+			bias_Test_AI_project_1.ipynb
+				This Jupyter notebook file contains implementation of testing phase of bias section in phase 2 on male test set and female test set.
+			 	--> By executing all the cells of this notebook all the steps will be executed.
+
 	- Exception of originality form: Expectations-of-Originality-Feb14-2012.pdf
-	- trained model: SavedModel.pt
-			 This file includes our trained data and includes all its features and properties.
-			 To load this file, you can apply the following codes:
+	- trained model: bias_before_balancing_sm.pt
+			 	This file includes our trained data and includes all its features and properties before balancing the dataset.
+			 bias_after_balancing_sm.pt
+			 	This file includes our trained data and includes all its features and properties after balancing the dataset.
 			
-				new_model = myModel(2)
-				new_model = new_model.to(device)
-
-
-				new_model.load_state_dict(torch.load(PATH))
-				new_model.eval()
-
-
-				print("\nTest Phase")
-				losses_model_new, accs_model_new, predicted_labels_test_new, accs_plot_model_new, losses_plot_model_new, test_labels_new  = test(dataloaders['Test'], new_model, optimizer)
 	- project report: Report.pdf
-			 This file has the explanation of the different phases of the project
-	- dataset: 	  
-			 The main dataset is more than 250MB so we upload it in the repository. This folder contains a sample of images in the main dataset.
-			 This folder contains train and test subfolders with all their images. It should be located in the same folder as source code.
-			 
-			 NOTE: When we added the data in github, the Train dataset got truncate the directory to 1,000 files. 4,000 entries were omitted from the list.
-                         So we uploaded in Kaggle as public dataset. It can be found in https://www.kaggle.com/bikashjaiswal/dataset-for-mask-nonmask-and-nonhuman-classes
-			 Use download api: kaggle datasets download -d bikashjaiswal/dataset-for-mask-nonmask-and-nonhuman-classes
+			 	This file has the explanation of the different phases of the project
+	- dataset: small-dataset
+			small-scale dataset
+		   balanced_small_dataset
+			balanced small-scale dataset after resolving the bias
+		   female_test_set
+			test set of female images
+		   male_test_set
+			test set of male images
+		   KFold_Dataset
+			similar to small-dataset except that Train and Test folders are merged to make ready for K-Fold cross validation	  
+		   KFold_BalancedDataset
+			similar to balanced_small_dataset except that Train and Test folders are merged to make ready for K-Fold cross validation	  
 
 Repository address: https://github.com/somayeghahari/comp6471-AI.git
 
@@ -38,4 +40,6 @@ Repository address: https://github.com/somayeghahari/comp6471-AI.git
 
 
 
-Member Contribution:	1- Somayeh Ghahary: responsible for designing the CNN architecture and collaborating on the report.	2- Mehrnoosh Amjadi: responsible for the evaluation phase, discuss the results, and collaborating on the report.	3- Bikash Jaiswal: responsible for data part and collecting dataset and collaborating on the report.	Note: all of us contribute to all the phases of the project.
+
+
+Member Contribution:	1- Somayeh Ghahary: responsible for bias phase, data balancing and collaborating on the report.	2- Mehrnoosh Amjadi: responsible for K-Fold cross validation phase and collaborating on the report.	3- Bikash Jaiswal: responsible for bias phase, data balancing and collaborating on the report.	Note: all of us contribute to all the phases of the project.
